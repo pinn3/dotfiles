@@ -76,7 +76,7 @@
 (set-face-attribute 'helm-source-header nil :height 0.1)
 (setq helm-split-window-in-side-p t)
 (set-face-attribute 'helm-selection nil
-                    :background "#444"
+                    :background "#333"
                     :foreground "#fff")
 (set-face-attribute 'helm-match nil
                     :background "#343030")
@@ -106,7 +106,7 @@
 ;;; code:
 (require 'highlight-current-line)
 (highlight-current-line-on t)
-(highlight-current-line-set-bg-color "#444")
+(highlight-current-line-set-bg-color "#333")
 
 (provide 'gui)
 ;;; gui.el ends here
