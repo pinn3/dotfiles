@@ -52,12 +52,15 @@
 			     (blink-matching-open))))
     (when matching-text (message matching-text))))
 
-;; Linum
+;; Nlinum
 ;;; code:
-(global-linum-mode 1)
-(setq line-number-mode t)
-(setq linum-format "%4d \u2502 ")
-(setq column-number-mode t)
+(global-nlinum-mode 1)
+(setq nlinum-format "%4d \u2502 ")
+
+(defun nlinum-off (_unused)
+  (nlinum-mode -1))
+(add-hook 'neo-after-create-hook 'nlinum-off)
+;(add-hook 'helm-before-initialize-hook 'nlinum-off)
 
 (set-face-attribute 'default nil :height 100)
 
@@ -91,6 +94,7 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-z") 'helm-select-action)
+(define-key helm-map (kbd "C-h") nil)
 
 (global-set-key (kbd "M-x") 'undefined)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -98,7 +102,8 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
-
+;; Higlight current line
+;;; code:
 (require 'highlight-current-line)
 (highlight-current-line-on t)
 (highlight-current-line-set-bg-color "#444")
