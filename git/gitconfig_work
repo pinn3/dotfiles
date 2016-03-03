@@ -1,0 +1,18 @@
+[user]
+    name = Jonathan Nguyen
+    username = pinn3
+    email = jonathan.nguyen@dooer.com
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    ll = log --stat --abbrev-commit
+    last = log -1 HEAD
+    ryck-o-tryck = !git pull --rebase && git push
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[core]
+    excludesfile = /Users/pinn3/.gitignore_global
