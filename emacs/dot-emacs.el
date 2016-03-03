@@ -3,7 +3,7 @@
 
 ;; MELPA
 ;;; code:
-(setq package-list '(auto-complete popup emmet-mode helm helm-core async popup async helm-core async markdown-mode neotree popup powerline web-mode))
+(setq package-list '(auto-complete popup emmet-mode flycheck seq let-alist pkg-info epl dash helm helm-core async popup async helm-core async highlight-current-line let-alist markdown-mode neotree pkg-info epl popup powerline seq web-mode))
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/") t)
