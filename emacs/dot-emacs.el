@@ -26,6 +26,7 @@
 (load "functions")
 (load "modes")
 (load "gui")
+(load "dooer")
 
 (provide 'dot-emacs)
 ;;; dot-emacs.el ends here

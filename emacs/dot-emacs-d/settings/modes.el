@@ -34,7 +34,6 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 ;; ReactJS for any .js-file
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
-(setq web-mode-code-indent-offset 2)
 
 ;; Flycheck
 ;;; code:
@@ -43,7 +42,6 @@
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
                           '(javascript-jshint)))
-(flycheck-add-mode 'javascript-standard 'web-mode)
 (setq-default flycheck-temp-prefix ".flycheck")
 
 (setq-default flycheck-disabled-checkers
