@@ -54,15 +54,21 @@
 
 ;; Nlinum
 ;;; code:
-(global-nlinum-mode 1)
-(setq nlinum-format "%4d \u2502 ")
+;(global-nlinum-mode 1)
+;(setq nlinum-format "%4d \u2502 ")
 
-(defun nlinum-off (_unused)
-  (nlinum-mode -1))
-(add-hook 'neo-after-create-hook 'nlinum-off)
-;(add-hook 'helm-before-initialize-hook 'nlinum-off)
+;(defun nlinum-off (_unused)
+;  (nlinum-mode -1))
+;(add-hook 'neo-after-create-hook 'nlinum-off)
 
-(set-face-attribute 'default nil :height 100)
+;(set-face-attribute 'default nil :height 100)
+
+;; Hide window separator
+;;; code:
+(set-face-attribute 'vertical-border
+                    nil
+                    :foreground "#282a2e"
+                    :background "#282a2e")
 
 ;; Helm
 ;;; code:
