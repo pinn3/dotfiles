@@ -1,6 +1,10 @@
 ;;; modes.el --- Emacs custom modes config
 ;;; Commentary:
 
+;; Writeroom
+;;; code:
+(setq writeroom-width 150)
+
 ;; Shiba markdown
 ;;; code:
 (require 'markdown-mode)
