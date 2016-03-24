@@ -1,6 +1,6 @@
 #!/bin/zsh
 cd "${ZDOTDIR:-$HOME}" &&
-git clone https://github.com/pinn3/prezto "${ZDOTDIR:-$HOME}/.zprezto" &&
+git clone --recursive https://github.com/pinn3/prezto "${ZDOTDIR:-$HOME}/.zprezto" &&
 cd "${ZDOTDIR:-$HOME}"/.zprezto &&
 
 setopt EXTENDED_GLOB &&
