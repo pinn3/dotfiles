@@ -55,7 +55,7 @@
 ;; Nlinum
 ;;; code:
 ;(global-nlinum-mode 1)
-;(setq nlinum-format "%4d \u2502 ")
+(setq nlinum-format "%4d \u2502 ")
 
 ;(defun nlinum-off (_unused)
 ;  (nlinum-mode -1))
