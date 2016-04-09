@@ -52,5 +52,10 @@
               (append flycheck-disabled-checkers
                           '(json-jsonlist)))
 
+(if (eq system-type 'darwin)
+;    (exec-path-from-shell-initialize)
+    (setq shell-command-switch "-ic"))
+
+
 (provide 'modes)
 ;;; modes.el ends here
