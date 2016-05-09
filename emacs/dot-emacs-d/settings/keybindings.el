@@ -1,4 +1,4 @@
-;;; keybindnings.el --- Emacs custom keybindnings config
+0;95;0c;;; keybindnings.el --- Emacs custom keybindnings config
 ;;; Commentary:
 
 ;; Align regexp
@@ -52,7 +52,6 @@
 ;; Mac shift-key fuckery
 ;;; code:
 (define-key input-decode-map "\e[1;2A" [S-up])
-(windmove-default-keybindings)
 
 ;; Delete commands
 ;;; code:
@@ -72,6 +71,7 @@
     (windmove-default-keybindings))
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
+(global-set-key (kbd "C-x p") 'ace-window)
 
 (provide 'keybindings)
 ;;; keybindings.el ends here
