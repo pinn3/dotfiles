@@ -1,0 +1,2 @@
+alias gti git $*
+alias la ls -al $*
