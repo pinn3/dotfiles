@@ -1,10 +1,8 @@
 #!/bin/bash
 
-read -r -p "Are you on OSX? [Y/n]" response
-response=${response,,} # tolower
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ln -s $DIR/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+echo "Symlinked osx dotfiles."
 
-if [[ $response =~ ^(yes|y| ) ]]; then
-    DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    ln -s $DIR/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
-    echo "Symlinked osx dotfiles."
-fi
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Installed brew"
