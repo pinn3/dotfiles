@@ -56,6 +56,10 @@
 ;    (exec-path-from-shell-initialize)
     (setq shell-command-switch "-ic"))
 
+;; Org-mode
+;;; code:
+(add-hook 'org-mode-hook (lambda () (org-indent-mode t)) t) ;; hides leading stars
+
 
 (provide 'modes)
 ;;; modes.el ends here
