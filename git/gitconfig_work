@@ -18,5 +18,6 @@
     undo = reset --soft head^
 [core]
     excludesfile = ~/.gitignore_global
+    pager = less -r
 [push]
   	default = current
