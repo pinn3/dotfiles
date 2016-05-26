@@ -42,6 +42,7 @@
 (load "modes")
 (load "gui")
 (load "dooer")
+(load "services")
 
 (provide 'dot-emacs)
 ;;; dot-emacs.el ends here
