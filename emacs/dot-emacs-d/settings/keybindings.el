@@ -73,5 +73,10 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "C-x p") 'ace-window)
 
+;; Spotify
+(global-set-key (kbd "ESC <right>") 'spotify-next)
+(global-set-key (kbd "ESC <left>") 'spotify-previous)
+(global-set-key (kbd "M-SPC") 'spotify-playpause)
+
 (provide 'keybindings)
 ;;; keybindings.el ends here
