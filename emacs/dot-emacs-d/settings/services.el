@@ -3,6 +3,7 @@
 ;; Easy service management with prodigy
 ;; Dooer services can be found in dooer.el
 
+
 ;; Collect app prodigy services
 ;;; code:
 (prodigy-define-service
@@ -31,6 +32,7 @@
   :tags '(personal collect)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
+
 
 (provide 'services)
 ;;; services.el ends here

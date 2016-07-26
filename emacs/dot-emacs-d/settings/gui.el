@@ -1,20 +1,24 @@
 ;;; gui.el --- Emacs GUI related config
 ;;; Commentary:
 
+
 ;; Theme
 ;;; code:
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'ample-flat t)
 
+
 ;; Powerline
 ;;; code:
 (powerline-default-theme)
+
 
 ;; Modeline clock
 ;;; code:
 (setq display-time-format nil)
 (setq display-time-24hr-format t)
 (display-time-mode 1)
+
 
 ;; Enable mouse support
 (unless window-system
@@ -37,6 +41,7 @@
 ;(scroll-bar-mode -1)
 ;(tool-bar-mode -1)
 
+
 ;; Highlight matching paranthesis and no limit to distance of matching parenthesis
 ;;; code:
 (show-paren-mode 1)
@@ -52,6 +57,7 @@
 			     (blink-matching-open))))
     (when matching-text (message matching-text))))
 
+
 ;; Nlinum
 ;;; code:
 ;(global-nlinum-mode 1)
@@ -63,12 +69,14 @@
 
 ;(set-face-attribute 'default nil :height 100)
 
+
 ;; Hide window separator
 ;;; code:
 (set-face-attribute 'vertical-border
                     nil
                     :foreground "#282a2e"
                     :background "#282a2e")
+
 
 ;; Helm
 ;;; code:
@@ -109,11 +117,13 @@
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
+
 ;; Higlight current line
 ;;; code:
 (require 'highlight-current-line)
 (highlight-current-line-on t)
 (highlight-current-line-set-bg-color "#333")
+
 
 (provide 'gui)
 ;;; gui.el ends here

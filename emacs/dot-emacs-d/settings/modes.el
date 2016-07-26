@@ -1,9 +1,11 @@
 ;;; modes.el --- Emacs custom modes config
 ;;; Commentary:
 
+
 ;; Writeroom
 ;;; code:
 (setq writeroom-width 150)
+
 
 ;; Shiba markdown
 ;;; code:
@@ -14,6 +16,7 @@
   (start-process "shiba" "*shiba*" "shiba" "--detach" buffer-file-name))
 (define-key markdown-mode-map (kbd "C-c C-c") 'open-with-shiba)
 
+
 ;; Emmet
 ;;; code:
 (require 'emmet-mode)
@@ -21,6 +24,7 @@
 (define-key emmet-mode-keymap (kbd "C-j") 'newline)
 (add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+
 
 ;; Web-mode
 ;;; code:
@@ -41,11 +45,13 @@
 ;; ReactJS for any .js-file
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
 
+
 ;; Indentation width
 ;;; code:
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
+
 
 ;; Flycheck
 ;;; code:
@@ -55,6 +61,7 @@
               (append flycheck-disabled-checkers
                           '(javascript-jshint)))
 (setq-default flycheck-temp-prefix ".flycheck")
+
 
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
@@ -67,13 +74,16 @@
 ;; Add standard js linting
 (flycheck-add-mode 'javascript-standard 'web-mode)
 
+
 ;; Org-mode
 ;;; code:
 (add-hook 'org-mode-hook (lambda () (org-indent-mode t)) t) ;; hides leading stars
 
+
 ;; Erc
 ;;; code:
 (add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
+
 
 (provide 'modes)
 ;;; modes.el ends here

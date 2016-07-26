@@ -1,6 +1,7 @@
 ;;; functions.el --- Emacs custom functions config
 ;;; Commentary:
 
+
 ;; Revert all buffers
 ;;; code:
 (defun revert-all-buffers ()
@@ -16,6 +17,7 @@
       (setq list (cdr list))
       (setq buffer (car list))))
   (message "Refreshed open files"))
+
 
 (provide 'functions)
 ;;; functions.el ends here

@@ -1,6 +1,7 @@
 ;;; dot-emacs.el --- Emacs main config
 ;;; Commentary:
 
+
 ;; MELPA
 ;;; code:
 (setq package-list
@@ -34,6 +35,7 @@
   (unless (package-installed-p package)
         (package-install package)))
 
+
 ;; Load config partials
 (add-to-list 'load-path "~/.emacs.d/settings")
 (load "keybindings")
@@ -43,6 +45,7 @@
 (load "gui")
 (load "dooer")
 (load "services")
+
 
 (provide 'dot-emacs)
 ;;; dot-emacs.el ends here
