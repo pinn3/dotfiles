@@ -28,7 +28,9 @@
 (add-to-list 'auto-mode-alist '("\\.scss?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.json?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
@@ -38,6 +40,12 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 ;; ReactJS for any .js-file
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
+
+;; Indentation width
+;;; code:
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
 
 ;; Flycheck
 ;;; code:
@@ -56,10 +64,16 @@
 ;    (exec-path-from-shell-initialize)
     (setq shell-command-switch "-ic"))
 
+;; Add standard js linting
+(flycheck-add-mode 'javascript-standard 'web-mode)
+
 ;; Org-mode
 ;;; code:
 (add-hook 'org-mode-hook (lambda () (org-indent-mode t)) t) ;; hides leading stars
 
+;; Erc
+;;; code:
+(add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
 
 (provide 'modes)
 ;;; modes.el ends here

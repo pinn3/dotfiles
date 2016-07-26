@@ -1,11 +1,45 @@
 ;;; dooer.el --- Dooer specific config
 ;;; Commentary:
 
-;; Javascript
+
+;; Dooer prodigy services
 ;;; code:
-(setq web-mode-code-indent-offset 2)
-(setq web-mode-markup-indent-offset 2)
-(flycheck-add-mode 'javascript-standard 'web-mode)
+(prodigy-define-service
+  :name "DooerAPI"
+  :command "npm"
+  :args '("run" "fresh")
+  :cwd "~/git/dooer/trd"
+  :tags '(work dooer)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+(prodigy-define-service
+  :name "Task Engine"
+  :command "npm"
+  :args '("run" "fresh")
+  :cwd "~/git/dooer/task-engine"
+  :tags '(work dooer)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+(prodigy-define-service
+  :name "Ledger"
+  :command "npm"
+  :args '("run" "fresh")
+  :cwd "~/git/dooer/ledger"
+  :tags '(work dooer)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+(prodigy-define-service
+  :name "HI frontend"
+  :command "npm"
+  :args '("start")
+  :cwd "~/git/dooer/hi-frontend"
+  :tags '(work dooer)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
 
 (provide 'dooer)
 ;;; dooer.el ends here
