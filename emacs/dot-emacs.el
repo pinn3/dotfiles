@@ -34,7 +34,7 @@
   (unless (package-installed-p package)
         (package-install package)))
 
-
+;; Load config partials
 (add-to-list 'load-path "~/.emacs.d/settings")
 (load "keybindings")
 (load "behaviour")
