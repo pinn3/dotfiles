@@ -40,6 +40,17 @@
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
 
+(prodigy-define-service
+  :name "Sumify frontend"
+  :command "npm"
+  :args '("start")
+  :cwd "~/git/dooer/sumify-frontend"
+  :env '(("API_HOSTNAME" "localhost")
+         ("API_PORT" "5206"))
+  :tags '(work dooer)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
 
 (provide 'dooer)
 ;;; dooer.el ends here
