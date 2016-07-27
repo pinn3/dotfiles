@@ -8,6 +8,7 @@ if [[ $response =~ ^(yes|y| ) ]]; then
     ./node/setup-osx.sh
 fi
 
+./screen/setup.sh
 ./git/setup.sh
 ./emacs/setup.sh
 ./prezto/setup.sh
