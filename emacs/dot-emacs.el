@@ -43,7 +43,6 @@
 (load "functions")
 (load "modes")
 (load "gui")
-(load "dooer")
 (load "services")
 
 
