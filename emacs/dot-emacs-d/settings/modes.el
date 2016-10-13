@@ -46,6 +46,16 @@
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
 
 
+;; Coffee-mode
+;;; code:
+(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
+
+
+;; lua-mode
+;;; code:
+(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
+(setq lua-indent-leve 2)
+
 ;; Indentation width
 ;;; code:
 (setq web-mode-code-indent-offset 2)
@@ -84,7 +94,6 @@
 ;; Erc
 ;;; code:
 (add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
-
 
 (provide 'modes)
 ;;; modes.el ends here

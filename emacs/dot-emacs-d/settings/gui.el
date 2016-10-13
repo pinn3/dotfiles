@@ -12,7 +12,6 @@
 ;;; code:
 (powerline-default-theme)
 
-
 ;; Modeline clock
 ;;; code:
 (setq display-time-format nil)
@@ -49,13 +48,20 @@
 (defadvice show-paren-function
   (after show-matching-paren-offscreen activate)
   "If the matching paren is offscreen, show the matching line in the echo area.
-  Has no effect if the character before point is not of the syntax class ')'."
+Has no effect if the character before point is not of the syntax class ')'."
   (interactive)
   (let* ((cb (char-before (point)))
 	 (matching-text (and cb
 			     (char-equal (char-syntax cb) ?\) )
 			     (blink-matching-open))))
     (when matching-text (message matching-text))))
+
+
+;; Indent-guides
+;;; code:
+(indent-guide-global-mode)
+(setq indent-guide-recursive t)
+(setq indent-guide-delay 0.5)
 
 
 ;; Nlinum
@@ -70,7 +76,7 @@
 ;(set-face-attribute 'default nil :height 100)
 
 
-;; Hide window separator
+;; Hide buffer separator
 ;;; code:
 (set-face-attribute 'vertical-border
                     nil

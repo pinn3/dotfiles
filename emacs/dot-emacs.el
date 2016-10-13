@@ -9,6 +9,7 @@
         emmet-mode
         markdown-mode
         web-mode
+        coffee-mode
         powerline
         neotree
         helm
@@ -18,7 +19,10 @@
         writeroom-mode
         spotify
         ace-window
-        prodigy))
+        ace-jump-mode
+        prodigy
+        indent-guide
+        lua-mode))
 
 (require 'package)
 (add-to-list 'package-archives
