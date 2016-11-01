@@ -50,6 +50,10 @@
 ;;; code:
 (add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
 
+;; Elm-mode
+;;; code:
+(add-to-list 'auto-mode-alist '("\\.elm\\'" . elm-mode))
+
 
 ;; lua-mode
 ;;; code:

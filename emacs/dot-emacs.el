@@ -22,7 +22,8 @@
         ace-jump-mode
         prodigy
         indent-guide
-        lua-mode))
+        lua-mode
+        elm-mode))
 
 (require 'package)
 (add-to-list 'package-archives
