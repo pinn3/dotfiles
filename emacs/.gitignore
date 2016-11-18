@@ -4,3 +4,4 @@ dot-emacs-d/ac-comphist.dat
 dot-emacs-d/eshell/*
 !dot-emacs-d/eshell/alias
 dot-emacs-d/tramp
+dot-emacs-d/abbrev_defs
