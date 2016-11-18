@@ -4,8 +4,7 @@ read -r -p "Are you on OSX? [Y/n]" response
 response=${response,,} # tolower
 
 if [[ $response =~ ^(yes|y| ) ]]; then
-    ./osx/setup.sh &&
-    ./node/setup-osx.sh
+  ./osx/setup.sh
 fi
 
 ./screen/setup.sh
