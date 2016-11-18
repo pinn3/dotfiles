@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./bash/setup.sh
 
 read -r -p "Are you on OSX? [y/N] " response
 case $response in
