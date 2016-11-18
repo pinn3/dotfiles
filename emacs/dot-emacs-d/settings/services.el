@@ -1,7 +1,6 @@
 ;;; services.el --- Prodigy services
 ;;; Commentary:
 ;; Easy service management with prodigy
-;; Dooer services can be found in dooer.el
 
 
 ;; Collect app prodigy services
@@ -10,7 +9,7 @@
   :name "Collect API"
   :command "npm"
   :args '("run" "monitor")
-  :cwd "~/git/collect"
+  :cwd "~/git/archive/collect"
   :tags '(personal collect)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
@@ -19,7 +18,7 @@
   :name "Collect server"
   :command "npm"
   :args '("run" "serve")
-  :cwd "~/git/collect"
+  :cwd "~/git/archive/collect"
   :tags '(personal collect)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
@@ -28,10 +27,11 @@
   :name "Collect watcher"
   :command "npm"
   :args '("run" "watch")
-  :cwd "~/git/collect"
+  :cwd "~/git/archive/collect"
   :tags '(personal collect)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
+
 
 ;; Tiny Collect app prodigy services
 ;;; code:
@@ -59,6 +59,18 @@
   :args '("run" "watch")
   :cwd "~/git/tiny-collect"
   :tags '(personal tcollect)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+
+;; Simple CMS prodigy services
+;;; code:
+(prodigy-define-service
+  :name "Simple CMS"
+  :command "npm"
+  :args '("run" "dev")
+  :cwd "~/git/simple-cms"
+  :tags '(personal simplecms)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
 

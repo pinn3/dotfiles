@@ -23,6 +23,15 @@
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
 
+(prodigy-define-service
+  :name "Hubbory orderflow frontend"
+  :command "npm"
+  :args '("run" "dev")
+  :cwd "~/git/ispy/hubbory/orderflode-frontend"
+  :tags '(work ispy hub)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
 
 (provide 'ispy)
 ;;; ispy.el ends here
