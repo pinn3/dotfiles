@@ -1,11 +1,12 @@
 #!/bin/bash
 
-read -r -p "Are you on OSX? [Y/n]" response
-response=${response,,} # tolower
 
-if [[ $response =~ ^(yes|y| ) ]]; then
-  ./osx/setup.sh
-fi
+read -r -p "Are you on OSX? [y/N] " response
+case $response in
+  [yY][eE][sS]|[yY])
+    ./osx/setup.sh
+    ;;
+esac
 
 ./screen/setup.sh
 ./git/setup.sh
