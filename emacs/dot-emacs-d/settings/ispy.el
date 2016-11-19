@@ -24,10 +24,10 @@
   :kill-process-buffer-on-stop t)
 
 (prodigy-define-service
-  :name "Hubbory orderflow frontend"
+  :name "Happi orderflow frontend"
   :command "npm"
   :args '("run" "dev")
-  :cwd "~/git/ispy/hubbory/orderflode-frontend"
+  :cwd "~/git/ispy/happi/orderflode-frontend"
   :tags '(work ispy hub)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
