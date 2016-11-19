@@ -3,6 +3,14 @@
 #
 
 
+# Add Z for jumping directories
+export _Z_CMD="j"
+. ${HOME}/.bash_modules/z.sh
+
+# Add git completion
+. ${HOME}/.bash_modules/git-completion.sh
+
+
 # Prompt for removal confirmation
 alias rm='rm -i'
 
@@ -28,12 +36,6 @@ syspip() {
 alias edit="emacsclient -t --alternate-editor=''"
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -t"
-
-
-# Add Z for jumping directories
-export _Z_CMD="j"
-. ${HOME}/.bash_modules/z.sh
-
 
 # Better tab completion. Not sure what bash version is needed for this.
 bind "set completion-ignore-case on"
