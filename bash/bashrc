@@ -35,6 +35,11 @@ export _Z_CMD="j"
 . ${HOME}/.bash_modules/z.sh
 
 
+# Better tab completion. Not sure what bash version is needed for this.
+bind "set completion-ignore-case on"
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
 # Ugh why. Not sure if I need this
 export TERM="xterm-256color" 
 
