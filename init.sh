@@ -9,6 +9,6 @@ case $response in
     ;;
 esac
 
-./screen/setup.sh
+./generic/setup.sh
 ./git/setup.sh
 ./emacs/setup.sh
