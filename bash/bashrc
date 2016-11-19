@@ -38,8 +38,10 @@ export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -t"
 
 # Better tab completion. Not sure what bash version is needed for this.
-bind "set completion-ignore-case on"
+bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
+bind 'set colored-stats on'
+bind 'set visible-stats on'
 bind 'TAB:menu-complete'
 
 # Ugh why. Not sure if I need this
