@@ -10,6 +10,9 @@ export _Z_CMD="j"
 # Add git completion
 . ${HOME}/.bash_modules/git-completion.sh
 
+# Add trash configuration
+. ${HOME}/.bash_modules/trash.sh
+
 
 # Prompt for removal confirmation
 alias rm='rm -i'
