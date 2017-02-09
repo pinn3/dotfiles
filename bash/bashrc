@@ -10,6 +10,9 @@ export _Z_CMD="j"
 # Add git completion
 . ${HOME}/.bash_modules/git-completion.sh
 
+# Add mgit for handling multiple git repositories
+alias mgit=${HOME}/.bash_modules/mgit.sh
+
 # Add trash configuration
 . ${HOME}/.bash_modules/trash.sh
 
