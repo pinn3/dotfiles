@@ -75,5 +75,17 @@
   :kill-process-buffer-on-stop t)
 
 
+;; OneLab services
+;;; code:
+(prodigy-define-service
+  :name "OneLab"
+  :command "npm"
+  :args '("start")
+  :cwd "~/git/onelab"
+  :tags '(personal onelab)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+
 (provide 'services)
 ;;; services.el ends here
