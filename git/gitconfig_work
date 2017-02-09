@@ -17,6 +17,7 @@
     mine = log --author='\\(Jonathan Nguyen\\)\\|\\(pinn3\\)'
     undo = reset --soft head^
     puhs = push
+    fire = !git add . && git commit -m "FIRE" && git push -f
 [core]
     excludesfile = ~/.gitignore_global
     pager = less -r
