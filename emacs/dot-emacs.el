@@ -23,7 +23,11 @@
         prodigy
         indent-guide
         lua-mode
-        elm-mode))
+        elm-mode
+        twittering-mode
+        mu4e-maildirs-extension
+        go-mode
+        typescript-mode))
 
 (require 'package)
 (add-to-list 'package-archives
