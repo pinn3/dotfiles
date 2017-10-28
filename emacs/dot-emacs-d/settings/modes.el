@@ -55,6 +55,7 @@
 ;;; code:
 (add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
 
+
 ;; Elm-mode
 ;;; code:
 (add-to-list 'auto-mode-alist '("\\.elm\\'" . elm-mode))
@@ -65,6 +66,19 @@
 (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
 (setq lua-indent-leve 2)
 
+
+;; go-mode
+;;; code:
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq gofmt-command "goimports")
+            (add-hook 'before-save-hook 'gofmt-before-save)
+            (setq tab-width 4)
+            (setq indent-tabs-mode 1)
+            (if (not (string-match "go" compile-command))
+                (set (make-local-variable 'compile-command)
+                     "go build -v && go test -v && go vet"))))
 ;; Indentation width
 ;;; code:
 (setq web-mode-code-indent-offset 2)
