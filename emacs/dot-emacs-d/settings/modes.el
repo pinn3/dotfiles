@@ -2,6 +2,11 @@
 ;;; Commentary:
 
 
+;; Editorconfig
+;;; code:
+(editorconfig-mode 1)
+
+
 ;; Writeroom
 ;;; code:
 (setq writeroom-width 150)
