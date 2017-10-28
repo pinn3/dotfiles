@@ -120,6 +120,11 @@
 ;; Erc
 ;;; code:
 (add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
+(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+(setq erc-save-buffer-on-part nil
+      erc-save-queries-on-quit nil
+      erc-log-write-after-send t
+      erc-log-write-after-insert t)
 
 (provide 'modes)
 ;;; modes.el ends here
