@@ -19,6 +19,9 @@ alias mgit=${HOME}/.bash_modules/mgit.sh
 # Add trash configuration
 . ${HOME}/.bash_modules/trash.sh
 
+# Add imgcat for previewing images in iterm2
+alias imgcat=${HOME}/.bash_modules/imgcat.sh
+
 
 # Prompt for removal confirmation
 alias rm='rm -i'
