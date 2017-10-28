@@ -63,6 +63,8 @@
 (global-set-key (kbd "M-?") 'mark-paragraph)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "M-h") nil))
 
 
 ;; neotree
@@ -82,9 +84,9 @@
 
 
 ;; Spotify
-(global-set-key (kbd "ESC <right>") 'spotify-next)
-(global-set-key (kbd "ESC <left>") 'spotify-previous)
-(global-set-key (kbd "M-SPC") 'spotify-playpause)
+;(global-set-key (kbd "ESC <right>") 'spotify-next)
+;(global-set-key (kbd "ESC <left>") 'spotify-previous)
+;(global-set-key (kbd "M-SPC") 'spotify-playpause)
 
 
 (provide 'keybindings)
