@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+# Set history size to infinite
+export HISTSIZE="INFINITE"
 
 # Add Z for jumping directories
 export _Z_CMD="j"
@@ -40,6 +42,8 @@ alias gi=git
 
 # Legacy grep alias with various flags. Use silver searcher (ag) instead.
 alias grope='grep --color=auto --exclude-dir={log,node_modules} --exclude={*.css,*.map} -rn'
+
+alias fucking=sudo
 
 # Lock down global pip installation
 export PIP_REQUIRE_VIRTUALENV=true
