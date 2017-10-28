@@ -106,7 +106,10 @@
     (setq shell-command-switch "-ic"))
 
 ;; Add standard js linting
-(flycheck-add-mode 'javascript-standard 'web-mode)
+;(flycheck-add-mode 'javascript-standard 'web-mode)
+
+;; Eslint
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 
 ;; Org-mode
