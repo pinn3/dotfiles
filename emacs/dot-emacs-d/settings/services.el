@@ -81,7 +81,7 @@
   :name "OneLab"
   :command "npm"
   :args '("start")
-  :cwd "~/git/onelab"
+  :cwd "~/git/archive/onelab"
   :tags '(personal onelab)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)

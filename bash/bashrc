@@ -78,3 +78,6 @@ export PS1="${BLUE}${SHORT_PATH} ${GREEN}${GIT_BRANCH}${RESET}❯❯❯ "
 # Ugh. Golang.
 export GOPATH=$HOME/golang
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Add flowbox specific configuration
+. ${HOME}/.bash_modules/flowbox.sh

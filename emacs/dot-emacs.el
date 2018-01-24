@@ -52,8 +52,8 @@
 (load "functions")
 (load "modes")
 (load "gui")
-(load "ispy")
-(load "services")
+(load "flowbox")
+;(load "services")
 
 
 (provide 'dot-emacs)
