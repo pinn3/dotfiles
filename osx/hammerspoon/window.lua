@@ -18,6 +18,7 @@ end
 local marginState = true
 local margin = 40
 local function getMargin () return marginState and margin or 0 end
+local function getGap () return getMargin() / 4 end
 
 local positions = {
   topLeft = function () return {
@@ -26,23 +27,23 @@ local positions = {
   } end,
   bottomLeft = function () return {
     getCurrentScreen()._x + getMargin(),
-    getCurrentScreen()._y + getCurrentScreen()._h / 2
+    getCurrentScreen()._y + getCurrentScreen()._h / 2 + getGap()
   } end,
   topRight = function () return {
-    getCurrentScreen()._x + getCurrentScreen()._w / 2,
+    getCurrentScreen()._x + getCurrentScreen()._w / 2 + getGap(),
     getCurrentScreen()._y + getMargin()
   } end,
   topRightThird = function () return {
-    getCurrentScreen()._x + getCurrentScreen()._w / 1.5,
+    getCurrentScreen()._x + getCurrentScreen()._w / 1.5 + getGap(),
     getCurrentScreen()._y + getMargin()
   } end,
   topRightTwoThirds = function () return {
-    getCurrentScreen()._x + getCurrentScreen()._w / 3,
+    getCurrentScreen()._x + getCurrentScreen()._w / 3 + getGap(),
     getCurrentScreen()._y + getMargin()
   } end,
   bottomRight = function () return {
-    getCurrentScreen()._x + getCurrentScreen()._w / 2,
-    getCurrentScreen()._y + getCurrentScreen()._h / 2
+    getCurrentScreen()._x + getCurrentScreen()._w / 2 + getGap(),
+    getCurrentScreen()._y + getCurrentScreen()._h / 2 + getGap()
   } end
 }
 
@@ -89,7 +90,7 @@ function window.split (position)
           recentSplitSize = 'third'
           if recentPosition == 'topRight' then getFocusedWindow():setTopLeft(hs.geometry.point(positions['topRightThird']())) end
           getFocusedWindow():setSize(hs.geometry.size(
-            getCurrentScreen()._w / 3 - getMargin(),
+            getCurrentScreen()._w / 3 - getMargin() - getGap(),
             getCurrentScreen()._h - getMargin() * 2
           ))
           return
@@ -98,7 +99,7 @@ function window.split (position)
           recentSplitSize = 'twoThirds'
           if recentPosition == 'topRight' then getFocusedWindow():setTopLeft(hs.geometry.point(positions['topRightTwoThirds']())) end
           getFocusedWindow():setSize(hs.geometry.size(
-            getCurrentScreen()._w / 1.5 - getMargin(),
+            getCurrentScreen()._w / 1.5 - getMargin() - getGap(),
             getCurrentScreen()._h - getMargin() * 2
           ))
           return
@@ -111,7 +112,7 @@ function window.split (position)
     
     getFocusedWindow():setTopLeft(hs.geometry.point(positions[position]()))
     getFocusedWindow():setSize(hs.geometry.size(
-      getCurrentScreen()._w / 2 - getMargin(),
+      getCurrentScreen()._w / 2 - getMargin() - getGap(),
       getCurrentScreen()._h - getMargin() * 2
     ))
   end
@@ -122,8 +123,8 @@ function window.quarter (position)
     resetRecents()
     getFocusedWindow():setTopLeft(hs.geometry.point(positions[position]()))
     getFocusedWindow():setSize(hs.geometry.size(
-      getCurrentScreen()._w / 2 - getMargin(),
-      getCurrentScreen()._h / 2 - getMargin()
+      getCurrentScreen()._w / 2 - getMargin() - getGap(),
+      getCurrentScreen()._h / 2 - getMargin() - getGap()
     ))
   end
 end
