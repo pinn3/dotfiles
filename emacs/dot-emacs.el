@@ -28,6 +28,7 @@
         mu4e-maildirs-extension
         go-mode
         typescript-mode
+        yaml-mode
         dumb-jump))
 
 (require 'package)
