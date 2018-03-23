@@ -27,7 +27,8 @@
         twittering-mode
         mu4e-maildirs-extension
         go-mode
-        typescript-mode))
+        typescript-mode
+        dumb-jump))
 
 (require 'package)
 (add-to-list 'package-archives

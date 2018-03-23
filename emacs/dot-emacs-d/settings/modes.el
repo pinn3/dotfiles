@@ -157,5 +157,9 @@
 (mu4e-maildirs-extension)
 
 
+;; Dumb jump
+(require 'dumb-jump)
+(dumb-jump-mode)
+
 (provide 'modes)
 ;;; modes.el ends here
