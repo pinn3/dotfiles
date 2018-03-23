@@ -121,6 +121,12 @@
 ;; Erc
 ;;; code:
 (add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
+(setq erc-nick "pinn3")
+(setq erc-user-full-name "pinn3"
+      erc-part-reason-various-alist '(("^$" "Leaving"))
+      erc-quit-reason-various-alist '(("^$" "Leaving"))
+      erc-quit-reason 'erc-part-reason-various
+      erc-part-reason 'erc-quit-reason-various)
 (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
 (setq erc-save-buffer-on-part nil
       erc-save-queries-on-quit nil
