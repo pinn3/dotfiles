@@ -46,6 +46,8 @@ alias la='ll -A'
 # Don't get interupted by git misspelling!
 alias gti=git
 alias gi=git
+alias gitk=git
+alias gtik=git
 
 # Legacy grep alias with various flags. Use silver searcher (ag) instead.
 alias grope='grep --color=auto --exclude-dir={log,node_modules} --exclude={*.css,*.map} -rn'
