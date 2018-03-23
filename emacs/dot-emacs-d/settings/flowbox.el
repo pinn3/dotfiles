@@ -15,6 +15,15 @@
   :kill-process-buffer-on-stop t)
 
 (prodigy-define-service
+  :name "Celery"
+  :command "~/git/flowbox/flask-app/env/bin/celery"
+  :args'("worker" "-A" "buzzify:celery" "-Q" "celery,product" "-l" "debug")
+  :cwd "~/git/flowbox/flask-app"
+  :tags '(work flowbox)
+  :kill-signal 'sigkill
+  :kill-process-buffer-on-stop t)
+
+(prodigy-define-service
   :name "Embed"
   :command "npm"
   :args '("run" "serve:embed")
