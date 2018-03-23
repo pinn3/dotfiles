@@ -28,6 +28,9 @@ alias mgit=${HOME}/.bash_modules/mgit.sh
 # Add imgcat for previewing images in iterm2
 alias imgcat=${HOME}/.bash_modules/imgcat.sh
 
+# Add pass completion
+. ${HOME}/.bash_modules/pass-completion.sh
+
 
 # Prompt for removal confirmation
 alias rm='rm -i'
