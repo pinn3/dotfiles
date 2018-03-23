@@ -60,8 +60,8 @@ Has no effect if the character before point is not of the syntax class ')'."
 ;; Indent-guides
 ;;; code:
 (indent-guide-global-mode)
-(setq indent-guide-recursive t)
-(setq indent-guide-delay 0.5)
+;(setq indent-guide-recursive t)
+(setq indent-guide-delay 0.2)
 
 
 ;; Nlinum
