@@ -24,12 +24,17 @@
         indent-guide
         lua-mode
         elm-mode
+        csv-mode
+        editorconfig
         twittering-mode
         mu4e-maildirs-extension
         go-mode
         typescript-mode
         yaml-mode
-        dumb-jump))
+        dumb-jump
+        abc-mode
+        hackernews
+        scad-mode))
 
 (require 'package)
 (add-to-list 'package-archives
