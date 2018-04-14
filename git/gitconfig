@@ -1,7 +1,7 @@
 [user]
     name = pinn3
     username = pinn3
-    email = jonathan.sweden@hotmail.com
+    email = iam@lacking.education
 [alias]
     st = status
     ci = commit
@@ -23,3 +23,6 @@
     pager = less -r
 [push]
   	default = current
+
+[includeIf "gitdir:~/git/flowbox*/"]
+    path = ~/git/dotfiles/git/gitconfig_work
