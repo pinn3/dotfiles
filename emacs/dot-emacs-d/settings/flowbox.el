@@ -6,9 +6,9 @@
 ;;; code:
 
 (prodigy-define-service
-  :name "Flowbox"
-  :command "~/git/flowbox/flask-app/env/bin/python"
-  :args '("run.py")
+  :name "Backend"
+  :command "docker-compose"
+  :args '("up")
   :cwd "~/git/flowbox/flask-app"
   :tags '(work flowbox)
   :kill-signal 'sigkill
