@@ -102,9 +102,9 @@
               (append flycheck-disabled-checkers
                           '(json-jsonlist)))
 
-(if (eq system-type 'darwin)
+;(if (eq system-type 'darwin)
 ;    (exec-path-from-shell-initialize)
-    (setq shell-command-switch "-ic"))
+;    (setq shell-command-switch "-ic"))
 
 ;; Add standard js linting
 ;(flycheck-add-mode 'javascript-standard 'web-mode)
