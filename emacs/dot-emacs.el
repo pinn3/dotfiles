@@ -22,7 +22,6 @@
         lua-mode
         csv-mode
         editorconfig
-        mu4e-maildirs-extension
         go-mode
         yaml-mode
         abc-mode

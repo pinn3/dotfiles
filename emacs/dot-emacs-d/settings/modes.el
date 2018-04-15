@@ -129,34 +129,5 @@
       erc-log-write-after-insert t)
 
 
-;; Mu4e
-;;; code:
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
-(require 'mu4e)
-(setq mu4e-maildir (expand-file-name "~/mail"))
-(setq mu4e-contexts
-      `( ,(make-mu4e-context
-           :name "Personal"
-           :enter-func (lambda () (mu4e-message "Entering Personal context"))
-           :leave-func (lambda () (mu4e-message "Leaving Personal context"))
-           :match-func (lambda (msg)
-                         (when msg
-                           (string-prefix-p "/personal" (mu4e-message-field msg :maildir))))
-           :vars '( ( user-mail-address       . "jonathan.sweden@hotmail.com"  )
-                    ( user-full-name          . "Jonathan Nguyen" )
-                    ( mu4e-compose-signature  . nil )))
-         ,(make-mu4e-context
-           :name "Ispy"
-           :enter-func (lambda () (mu4e-message "Entering Ispy context"))
-           :leave-func (lambda () (mu4e-message "Leaving Ispy context"))
-           :match-func (lambda (msg)
-                         (when msg
-                           (string-prefix-p "/ispy" (mu4e-message-field msg :maildir))))
-           :vars '( ( user-mail-address       . "jonathan.nguyen@ispy.se" )
-                    ( user-full-name          . "Jonathan Nguyen" )
-                    ( mu4e-compose-signature  . nil )))))
-(mu4e-maildirs-extension)
-
-
 (provide 'modes)
 ;;; modes.el ends here
