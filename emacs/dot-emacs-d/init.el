@@ -1,4 +1,4 @@
-;;; dot-emacs.el --- Emacs main config
+;;; init.el --- Emacs main config
 ;;; Commentary:
 
 
@@ -55,4 +55,4 @@
 ;(load "services")
 
 
-(provide 'dot-emacs)
+(provide 'init)
