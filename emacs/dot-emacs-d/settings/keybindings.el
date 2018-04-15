@@ -88,11 +88,5 @@
 (global-set-key (kbd "C-x f") 'ace-jump-mode)
 
 
-;; Spotify
-;(global-set-key (kbd "ESC <right>") 'spotify-next)
-;(global-set-key (kbd "ESC <left>") 'spotify-previous)
-;(global-set-key (kbd "M-SPC") 'spotify-playpause)
-
-
 (provide 'keybindings)
 ;;; keybindings.el ends here

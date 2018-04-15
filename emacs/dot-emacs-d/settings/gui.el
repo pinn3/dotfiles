@@ -64,18 +64,6 @@ Has no effect if the character before point is not of the syntax class ')'."
 (setq indent-guide-delay 0.2)
 
 
-;; Nlinum
-;;; code:
-;(global-nlinum-mode 1)
-(setq nlinum-format "%4d \u2502 ")
-
-;(defun nlinum-off (_unused)
-;  (nlinum-mode -1))
-;(add-hook 'neo-after-create-hook 'nlinum-off)
-
-;(set-face-attribute 'default nil :height 100)
-
-
 ;; Hide buffer separator
 ;;; code:
 (set-face-attribute 'vertical-border
@@ -126,9 +114,8 @@ Has no effect if the character before point is not of the syntax class ')'."
 
 ;; Higlight current line
 ;;; code:
-(require 'highlight-current-line)
-(highlight-current-line-on t)
-(highlight-current-line-set-bg-color "#333")
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#333")
 
 
 (provide 'gui)

@@ -57,11 +57,6 @@
 (add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
 
 
-;; Elm-mode
-;;; code:
-(add-to-list 'auto-mode-alist '("\\.elm\\'" . elm-mode))
-
-
 ;; lua-mode
 ;;; code:
 (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
@@ -162,10 +157,6 @@
                     ( mu4e-compose-signature  . nil )))))
 (mu4e-maildirs-extension)
 
-
-;; Dumb jump
-(require 'dumb-jump)
-(dumb-jump-mode)
 
 (provide 'modes)
 ;;; modes.el ends here

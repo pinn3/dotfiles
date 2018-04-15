@@ -14,24 +14,17 @@
         neotree
         helm
         flycheck
-        highlight-current-line
-        nlinum
         writeroom-mode
-        spotify
         ace-window
         ace-jump-mode
         prodigy
         indent-guide
         lua-mode
-        elm-mode
         csv-mode
         editorconfig
-        twittering-mode
         mu4e-maildirs-extension
         go-mode
-        typescript-mode
         yaml-mode
-        dumb-jump
         abc-mode
         hackernews
         scad-mode))
@@ -64,4 +57,3 @@
 
 
 (provide 'dot-emacs)
-;;; dot-emacs.el ends here
