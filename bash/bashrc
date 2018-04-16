@@ -54,6 +54,8 @@ alias grope='grep --color=auto --exclude-dir={log,node_modules} --exclude={*.css
 
 alias fucking=sudo
 
+alias stack=docker-compose
+
 # Lock down global pip installation
 export PIP_REQUIRE_VIRTUALENV=true
 syspip() {
