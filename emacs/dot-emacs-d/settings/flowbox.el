@@ -1,6 +1,8 @@
 ;;; flowbox.el --- Flowbox specific config
 ;;; Commentary:
 
+(setq-default flycheck-python-pycompile-executable "~/git/flowbox/aws-lambda/python/lambda-py/bin/python3")
+
 
 ;; Flowbox prodigy services
 ;;; code:
