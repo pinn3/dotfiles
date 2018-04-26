@@ -2,11 +2,6 @@
 ;;; Commentary:
 
 
-;; Align regexp
-;;; code:
-(global-set-key (kbd "C-x C-a") 'align-regexp)
-
-
 ;; Revert buffer
 ;;; code:
 (global-set-key (kbd "M-r") 'revert-buffer)
@@ -75,7 +70,7 @@
 ;; neotree
 ;;; code:
 (global-set-key [f8] 'neotree-toggle)
-(setq neo-window-width 50)
+;(setq neo-window-width 50)
 
 
 ;; Movement

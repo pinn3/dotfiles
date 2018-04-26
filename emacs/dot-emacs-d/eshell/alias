@@ -1,3 +1,0 @@
-alias grope grep --color=auto --exclude-dir={log,node_modules,dist} --exclude="*.scss, *.map" -rn $*
-alias gti git $*
-alias la ls -al $*
