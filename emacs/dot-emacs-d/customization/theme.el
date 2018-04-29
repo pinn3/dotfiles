@@ -2,10 +2,6 @@
 ;;; Commentary:
 
 
-(custom-set-variables
-  '(custom-enabled-themes (quote (wombat))))
-
-
 ;; Disable menu bar, scroll bar and tool bar
 (menu-bar-mode -1)
 ;(scroll-bar-mode -1)
