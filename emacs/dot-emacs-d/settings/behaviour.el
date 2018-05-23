@@ -34,6 +34,7 @@
     ("retrun" "return" nil 0)
     ("improt" "import" nil 0)
     ("impor" "import" nil 0)
+    ("impot" "import" nil 0)
     ("frolm" "from" nil 0)
     ("modasl" "modals" nil 0)
     ))
