@@ -26,7 +26,8 @@
         yaml-mode
         abc-mode
         hackernews
-        scad-mode))
+        scad-mode
+        terraform-mode))
 
 (require 'package)
 (add-to-list 'package-archives
