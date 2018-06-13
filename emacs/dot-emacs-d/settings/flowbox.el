@@ -38,7 +38,7 @@
   :name "Frontend"
   :command "npm"
   :args '("start")
-  :cwd "~/git/flowbox/flask-app/frontend-src"
+  :cwd "~/git/flowbox/frontend-admin"
   :tags '(work flowbox)
   :kill-signal 'sigkill
   :kill-process-buffer-on-stop t)
