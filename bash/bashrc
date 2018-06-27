@@ -59,12 +59,6 @@ alias fucking=sudo
 
 alias stack=docker-compose
 
-# Lock down global pip installation
-export PIP_REQUIRE_VIRTUALENV=true
-syspip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
 # Editor settings
 alias edit="emacsclient -t --alternate-editor=''"
 export EDITOR="emacsclient -t"
