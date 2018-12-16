@@ -27,7 +27,8 @@
         abc-mode
         hackernews
         scad-mode
-        terraform-mode))
+        terraform-mode
+        julia-mode))
 
 (require 'package)
 (add-to-list 'package-archives
