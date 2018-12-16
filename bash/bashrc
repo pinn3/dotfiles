@@ -37,6 +37,8 @@ alias imgcat=${HOME}/.bash_modules/imgcat.sh
 # Add pass completion
 . ${HOME}/.bash_modules/pass-completion.sh
 
+# Add repl-anything module
+alias repl=${HOME}/.bash_modules/repl.sh
 
 # Prompt for removal confirmation
 alias rm='rm -i'
