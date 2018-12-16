@@ -9,6 +9,9 @@ export LANG="en_US.UTF-8"
 # Set history size to infinite
 export HISTSIZE="INFINITE"
 
+# Enable ** (globstar) path matching
+shopt -s globstar
+
 # Add PS1 customization
 . ${HOME}/.bash_modules/ps1.sh
 
