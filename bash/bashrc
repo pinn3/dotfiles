@@ -9,6 +9,9 @@ export LANG="en_US.UTF-8"
 # Set history size to infinite
 export HISTSIZE="INFINITE"
 
+# Add custom binaries to path
+export PATH=$PATH:${HOME}/.bash_binaries
+
 # Enable ** (globstar) path matching
 shopt -s globstar
 
@@ -22,23 +25,12 @@ export _Z_CMD="j"
 # Add git completion
 . ${HOME}/.bash_modules/git-completion.sh
 
-# Add stash for git-stash-like utility
-alias stash=${HOME}/.bash_modules/stash.sh
-
-# Add mgit for handling multiple git repositories
-alias mgit=${HOME}/.bash_modules/mgit.sh
-
 # Add trash configuration
 . ${HOME}/.bash_modules/trash.sh
-
-# Add imgcat for previewing images in iterm2
-alias imgcat=${HOME}/.bash_modules/imgcat.sh
 
 # Add pass completion
 . ${HOME}/.bash_modules/pass-completion.sh
 
-# Add repl-anything module
-alias repl=${HOME}/.bash_modules/repl.sh
 
 # Prompt for removal confirmation
 alias rm='rm -i'
