@@ -14,7 +14,7 @@
   'vertical-border (make-glyph-code 8203))
 (set-face-attribute 'vertical-border
   nil
-  :background (face-attribute 'default :background))
+  :background "\033")
 
 
 ;; Higlight current line

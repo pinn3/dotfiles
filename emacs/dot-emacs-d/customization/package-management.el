@@ -137,9 +137,7 @@
   :config
   (define-key emmet-mode-keymap (kbd "C-o") 'emmet-expand-line)
   (define-key emmet-mode-keymap (kbd "C-j") 'newline)
-  ;; Auto-start on with web-mode
   (add-hook 'web-mode-hook 'emmet-mode)
-  ;; enable Emmet's css abbreviation.
   (add-hook 'css-mode-hook  'emmet-mode))
 
 
@@ -150,9 +148,11 @@
 
 (use-package neotree
   :init
-  (setq neo-window-width 50))
-
-
+  (setq neo-window-width 40)
+  :config
+  (custom-set-faces
+   '(neo-dir-link-face ((t (:foreground "blue"))))
+   '(neo-file-link-face ((t (:foreground "white"))))))
 
 
 (provide 'package-management)
