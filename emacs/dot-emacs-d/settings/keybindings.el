@@ -88,5 +88,11 @@
 (global-set-key (kbd "C-x f") 'ace-jump-mode)
 
 
+;; Macro hard bindings
+;;; code:
+(global-set-key [f3] 'kmacro-start-macro)
+(global-set-key [f4] 'kmacro-end-or-call-macro)
+
+
 (provide 'keybindings)
 ;;; keybindings.el ends here
