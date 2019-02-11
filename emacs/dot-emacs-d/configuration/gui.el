@@ -98,11 +98,5 @@ Has no effect if the character before point is not of the syntax class ')'."
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 
-;; Higlight current line
-;;; code:
-(global-hl-line-mode 1)
-(set-face-background 'hl-line "#333")
-
-
 (provide 'gui)
 ;;; gui.el ends here
