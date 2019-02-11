@@ -58,14 +58,6 @@ Has no effect if the character before point is not of the syntax class ')'."
 (setq indent-guide-delay 0.2)
 
 
-;; Hide buffer separator
-;;; code:
-(set-face-attribute 'vertical-border
-                    nil
-                    :foreground "#282a2e"
-                    :background "#282a2e")
-
-
 ;; Helm
 ;;; code:
 (require 'helm)
