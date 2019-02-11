@@ -29,7 +29,8 @@
         scad-mode
         terraform-mode
         julia-mode
-        yasnippet))
+        yasnippet
+        expand-region))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -70,6 +71,12 @@
 (define-key yas-keymap (kbd "C-O") 'yas-exit-all-snippets)
 (define-key yas-keymap (kbd "C-n") 'yas-next-field)
 (define-key yas-keymap (kbd "C-p") 'yas-prev-field)
+
+
+(require 'expand-region)
+(global-set-key (kbd "M-SPC") 'er/expand-region)
+(global-set-key (kbd "M-DEL") 'er/contract-region)
+(pending-delete-mode t)
 
 
 (provide 'init)
