@@ -21,14 +21,13 @@
 
 (add-to-list 'load-path "~/.emacs.d/configuration")
 (load "theme")
+(load "flowbox")
 ; Legacy stuff:
 (load "keybindings")
 (load "behaviour")
 (load "functions")
 (load "modes")
 (load "gui")
-(load "flowbox")
-;(load "services")
 
 
 (require 'yasnippet)
