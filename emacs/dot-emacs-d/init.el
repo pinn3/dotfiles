@@ -2,9 +2,10 @@
 ;;; Commentary:
 
 
-;;; code:
+;;; Code:
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
 
 (require 'package)
 (package-initialize)
@@ -17,12 +18,10 @@
 (when (>= emacs-major-version 25)
   (package-install-selected-packages))
 
+
 (add-to-list 'load-path "~/.emacs.d/configuration")
 (load "theme")
-
-
-(add-to-list 'load-path "~/.emacs.d/settings")
-;; Load config partials
+; Legacy stuff:
 (load "keybindings")
 (load "behaviour")
 (load "functions")
