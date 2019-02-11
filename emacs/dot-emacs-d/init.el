@@ -3,47 +3,19 @@
 
 
 ;;; code:
-(setq package-list
-      '(auto-complete
-        emmet-mode
-        markdown-mode
-        web-mode
-        powerline
-        neotree
-        helm
-        flycheck
-        writeroom-mode
-        ace-window
-        ace-jump-mode
-        prodigy
-        indent-guide
-        lua-mode
-        csv-mode
-        editorconfig
-        go-mode
-        yaml-mode
-        abc-mode
-        hackernews
-        scad-mode
-        terraform-mode
-        julia-mode
-        yasnippet
-        expand-region))
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
 
 (require 'package)
+(package-initialize)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
+        '("melpa" . "http://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-
-(package-initialize)
-
-;; Check for and install missing packages
 (unless package-archive-contents
   (package-refresh-contents))
-(dolist (package package-list)
-  (unless (package-installed-p package)
-        (package-install package)))
+(when (>= emacs-major-version 25)
+  (package-install-selected-packages))
 
 
 ;; Load config partials
