@@ -31,6 +31,9 @@ export _Z_CMD="j"
 # Add pass completion
 . ${HOME}/.bash_modules/pass-completion.sh
 
+# Add base16 colors
+. ${HOME}/.bash_modules/base16-tomorrow-night.sh
+
 
 # Prompt for removal confirmation
 alias rm='rm -i'

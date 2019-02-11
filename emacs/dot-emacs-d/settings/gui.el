@@ -2,12 +2,6 @@
 ;;; Commentary:
 
 
-;; Theme
-;;; code:
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'ample-flat t)
-
-
 ;; Powerline
 ;;; code:
 (powerline-default-theme)

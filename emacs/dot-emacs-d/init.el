@@ -17,9 +17,12 @@
 (when (>= emacs-major-version 25)
   (package-install-selected-packages))
 
+(add-to-list 'load-path "~/.emacs.d/configuration")
+(load "theme")
 
-;; Load config partials
+
 (add-to-list 'load-path "~/.emacs.d/settings")
+;; Load config partials
 (load "keybindings")
 (load "behaviour")
 (load "functions")
