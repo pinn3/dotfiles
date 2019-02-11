@@ -28,7 +28,8 @@
         hackernews
         scad-mode
         terraform-mode
-        julia-mode))
+        julia-mode
+        yasnippet))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -55,6 +56,20 @@
 (load "gui")
 (load "flowbox")
 ;(load "services")
+
+
+(require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+(yas-global-mode 1)
+(add-hook 'python-mode-hook
+   '(lambda () (set (make-local-variable 'yas-indent-line) 'fixed)))
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "C-o") 'yas-expand)
+(define-key yas-keymap (kbd "C-o") 'yas-exit-snippet)
+(define-key yas-keymap (kbd "C-O") 'yas-exit-all-snippets)
+(define-key yas-keymap (kbd "C-n") 'yas-next-field)
+(define-key yas-keymap (kbd "C-p") 'yas-prev-field)
 
 
 (provide 'init)

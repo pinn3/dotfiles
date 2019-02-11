@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: dynamodb paginator
+# key: dpag
+# --
+
+def ${1:paginator_name}(${2:required_arg}, after_cursor=None):
+    query = {'KeyConditionExpression': Key($3).eq(required_arg)}
+    if after_cursor:
+        query['ExclusiveStartKey'] = after_cursor
+
+    res = ${4:dynamodb_resource}.Table('${5:table_name}').query(**query)
+    for item in res.get('Items', []):
+        yield item
+
+    next_cursor = res.get('LastEvaluatedKey')
+    if next_cursor:
+        yield from $1($2, next_cursor)
