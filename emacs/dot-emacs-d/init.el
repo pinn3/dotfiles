@@ -2,14 +2,12 @@
 ;;; Commentary:
 
 
-;; MELPA
 ;;; code:
 (setq package-list
       '(auto-complete
         emmet-mode
         markdown-mode
         web-mode
-        coffee-mode
         powerline
         neotree
         helm
@@ -80,3 +78,4 @@
 
 
 (provide 'init)
+;;; init.el ends here
