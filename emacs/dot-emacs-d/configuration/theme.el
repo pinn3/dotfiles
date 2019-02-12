@@ -56,6 +56,10 @@ Has no effect if the character before point is not of the syntax class ')'."
                       (unless (string-match "\\(?:/\\|\\`\\)\\.\\{1,2\\}\\'" file)
                                             (funcall fcn file))))
 
+;; Neotree
+(require 'neotree)
+(setq neo-window-width 50)
+
 
 (provide 'theme)
 ;;; theme.el ends here
