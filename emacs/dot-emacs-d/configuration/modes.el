@@ -7,11 +7,6 @@
 (editorconfig-mode 1)
 
 
-;; Writeroom
-;;; code:
-(setq writeroom-width 150)
-
-
 ;; Shiba markdown
 ;;; code:
 (require 'markdown-mode)
