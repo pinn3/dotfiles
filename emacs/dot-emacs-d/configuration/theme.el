@@ -50,18 +50,7 @@ Has no effect if the character before point is not of the syntax class ')'."
 (setq helm-autoresize-max-height 11)
 (setq helm-autoresize-min-height 11)
 (setq helm-display-header-line nil)
-(set-face-attribute 'helm-source-header nil :height 0.1)
 (setq helm-split-window-in-side-p t)
-(set-face-attribute 'helm-selection nil
-                    :background "#333"
-                    :foreground "#fff")
-(set-face-attribute 'helm-match nil
-                    :background "#343030")
-
-(set-face-attribute 'helm-source-header nil
-                    :background "#a9df90"
-                    :foreground "#706565")
-
 (advice-add 'helm-ff-filter-candidate-one-by-one
             :around (lambda (fcn file)
                       (unless (string-match "\\(?:/\\|\\`\\)\\.\\{1,2\\}\\'" file)
