@@ -27,7 +27,6 @@
 (load "behaviour")
 (load "functions")
 (load "modes")
-(load "gui")
 
 
 (require 'yasnippet)
