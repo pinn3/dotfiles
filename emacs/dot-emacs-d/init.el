@@ -25,7 +25,6 @@
 ; Legacy stuff:
 (load "keybindings")
 (load "behaviour")
-(load "functions")
 (load "modes")
 
 

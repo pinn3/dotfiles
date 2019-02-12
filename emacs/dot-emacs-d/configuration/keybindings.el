@@ -5,6 +5,21 @@
 ;;; Code:
 (global-set-key (kbd "C-x C-a") 'align-regexp)
 (global-set-key (kbd "M-r") 'revert-buffer)
+(defun revert-all-buffers ()
+  "Refreshes all open buffers from their respective files."
+  (interactive)
+  (when (yes-or-no-p "Revert all buffers? ")
+    (let* ((list (buffer-list))
+           (buffer (car list)))
+      (while buffer
+        (when (and (buffer-file-name buffer)
+                   (not (buffer-modified-p buffer)))
+          (set-buffer buffer)
+          (revert-buffer t t t))
+        (setq list (cdr list))
+        (setq buffer (car list))))
+    (message "Refreshed open files")))
+(global-set-key (kbd "M-R") 'revert-all-buffers)
 (global-set-key (kbd "C-?") 'help-command)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
