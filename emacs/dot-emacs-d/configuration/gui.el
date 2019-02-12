@@ -2,17 +2,7 @@
 ;;; Commentary:
 
 
-;; Powerline
-;;; code:
-(powerline-default-theme)
-
-;; Modeline clock
-;;; code:
-(setq display-time-format nil)
-(setq display-time-24hr-format t)
-(display-time-mode 1)
-
-
+;;; Code
 ;; Enable mouse support
 (unless window-system
   (require 'mouse)
@@ -29,14 +19,12 @@
 
 
 ;; Disable Menu Bar, Scroll Bar, tool bar
-;;; code:
 (menu-bar-mode -1)
 ;(scroll-bar-mode -1)
 ;(tool-bar-mode -1)
 
 
 ;; Highlight matching paranthesis and no limit to distance of matching parenthesis
-;;; code:
 (show-paren-mode 1)
 (setq blink-matching-paren-distance nil)
 (defadvice show-paren-function
@@ -52,14 +40,12 @@ Has no effect if the character before point is not of the syntax class ')'."
 
 
 ;; Indent-guides
-;;; code:
 (indent-guide-global-mode)
 ;(setq indent-guide-recursive t)
 (setq indent-guide-delay 0.2)
 
 
 ;; Helm
-;;; code:
 (require 'helm)
 (setq helm-ff-skip-boring-files t)
 (helm-autoresize-mode 1)
