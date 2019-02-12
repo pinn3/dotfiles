@@ -2,22 +2,6 @@
 ;;; Commentary:
 
 
-;;; Code
-;; Enable mouse support
-(unless window-system
-  (require 'mouse)
-  (xterm-mouse-mode t)
-  (global-set-key [mouse-4] '(lambda ()
-			       (interactive)
-			       (backward-paragraph)))
-  (global-set-key [mouse-5] '(lambda ()
-			       (interactive)
-			       (forward-paragraph)))
-  (defun track-mouse (e))
-  (setq mouse-sel-mode t)
-)
-
-
 ;; Disable Menu Bar, Scroll Bar, tool bar
 (menu-bar-mode -1)
 ;(scroll-bar-mode -1)
