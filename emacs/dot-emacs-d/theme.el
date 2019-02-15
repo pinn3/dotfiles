@@ -23,6 +23,19 @@
 ;(tool-bar-mode -1)
 
 
+;; Mode-line customization
+(column-number-mode 1)
+(setq-default mode-line-format
+      '("%e"
+        " "
+        mode-line-directory
+        mode-line-buffer-identification
+        " "
+        mode-line-position
+        " "
+        mode-name
+        mode-line-misc-info))
+
 ;; Highlight matching paranthesis and no limit to distance of matching parenthesis
 (show-paren-mode 1)
 (setq blink-matching-paren-distance nil)
