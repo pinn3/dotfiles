@@ -4,7 +4,7 @@
 # --
 
 def ${1:paginator_name}(${2:required_arg}, after_cursor=None):
-    query = {'KeyConditionExpression': Key($3).eq(required_arg)}
+    query = {'KeyConditionExpression': Key($3).eq($2)}
     if after_cursor:
         query['ExclusiveStartKey'] = after_cursor
 
