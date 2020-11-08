@@ -73,7 +73,10 @@ Has no effect if the character before point is not of the syntax class ')'."
 ;; Neotree
 (require 'neotree)
 (setq neo-window-width 50)
-
+(setq neo-hidden-regexp-list
+    '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "\\.o$" ;; defaults
+      "__pycache__"
+      "__snapshots__"))
 
 (provide 'theme)
 ;;; theme.el ends here
