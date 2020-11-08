@@ -33,5 +33,42 @@
       (insert blackened))))
 
 
+(require 'subr-x)
+
+
+;; Run prettier and eslint on save
+(defun run-formatter ()
+  "Run prettier formatting on file save when in flowbox frontend project."
+  (when (file-in-directory-p buffer-file-name "/home/pinn3/git/flowbox-frontend")
+    ; have a look at https://emacs.stackexchange.com/a/12406
+    (when (member (file-name-extension buffer-file-name) '("js" "jsx"))
+      (shell-command
+       (format "docker run --rm -v /home/pinn3/git/flowbox-frontend:/usr/src -w /usr/src node:12.9.0 yarn prettier %s --write"
+               (string-remove-prefix "/home/pinn3/git/flowbox-frontend/" buffer-file-name)))
+      (revert-buffer :ignore-auto :noconfirm)
+      (shell-command
+       (format "docker run --rm -v /home/pinn3/git/flowbox-frontend:/usr/src -w /usr/src node:12.9.0 yarn eslint %s"
+               (string-remove-prefix "/home/pinn3/git/flowbox-frontend/" buffer-file-name)))
+      (revert-buffer :ignore-auto :noconfirm))))
+(add-hook 'after-save-hook 'run-formatter)
+
+
+;; Run black and isort on save
+(defun run-python-formatter ()
+  "Run prettier formatting on file save when in flowbox frontend project."
+  (when (file-in-directory-p buffer-file-name "/home/pinn3/git/flowbox")
+    ; have a look at https://emacs.stackexchange.com/a/12406
+    (when (string= (file-name-extension buffer-file-name) "py")
+      (shell-command
+       (format "docker run --rm -v /home/pinn3/git/flowbox/flask-app:/usr/src -w /usr/src flowbox/flask-app poetry run isort --apply %s"
+               (string-remove-prefix "/home/pinn3/git/flowbox/flask-app/" buffer-file-name)))
+      (revert-buffer :ignore-auto :noconfirm)
+      (shell-command
+       (format "docker run --rm -v /home/pinn3/git/flowbox:/usr/src -w /usr/src python:3.8.1 bash -c 'pip install black==20.8b1 > /dev/null 2>&1 && black %s'"
+               (string-remove-prefix "/home/pinn3/git/flowbox/" buffer-file-name)))
+      (revert-buffer :ignore-auto :noconfirm))))
+(add-hook 'after-save-hook 'run-python-formatter)
+
+
 (provide 'flowbox)
 ;;; flowbox.el ends here
