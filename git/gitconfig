@@ -12,7 +12,6 @@
     l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
     ll = log --stat --abbrev-commit
     last = log -1 HEAD
-    ryck-o-tryck = !git pull --rebase && git push
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     mine = log --author='\\(Jonathan Nguyen\\)\\|\\(pinn3\\)'
     undo = reset --soft HEAD^
