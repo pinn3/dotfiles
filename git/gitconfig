@@ -15,7 +15,7 @@
     ryck-o-tryck = !git pull --rebase && git push
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     mine = log --author='\\(Jonathan Nguyen\\)\\|\\(pinn3\\)'
-    undo = reset --soft head^
+    undo = reset --soft HEAD^
     puhs = push
     fire = !git add . && git commit -m "FIRE" && git push -f
     inspect = !~/scripts/git-inspect-current-branch.sh
