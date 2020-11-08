@@ -7,7 +7,7 @@
 
 ;; Hacky setup of blacken
 (require 'blacken)
-(setq blacken-executable "~/git/flowbox-deployment-envs/3.6/bin/black")
+(setq blacken-executable "~/scripts/black.sh")
 
 (defun blacken-region (beg end)
   "Try to blacken the current region (between BEG and END)."
