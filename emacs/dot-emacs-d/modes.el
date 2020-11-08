@@ -43,6 +43,8 @@
 (add-to-list 'auto-mode-alist '("\\.ejs?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
