@@ -2,6 +2,14 @@
 ;;; Commentary:
 
 
+;; Whitespace
+;;; code:
+(require 'whitespace)
+(setq whitespace-style '(face lines-tail trailing))
+(setq whitespace-line-column 80)
+(global-whitespace-mode t)
+
+
 ;; Editorconfig
 ;;; code:
 (editorconfig-mode 1)
