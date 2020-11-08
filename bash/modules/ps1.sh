@@ -5,5 +5,5 @@ RESET="\[$(tput sgr0)\]"
 
 SHORT_PATH='$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")'
 GIT_BRANCH='$(BRANCH="$(git branch 2> /dev/null | grep "* " )"; if [ ! "${BRANCH}" == "" ]; then printf "[${BRANCH:2}] "; else printf ""; fi)'
-TIMESTAMP='$(date)'
+TIMESTAMP='$(date -Is)'
 export PS1="${BLUE}${SHORT_PATH} ${GREEN}${GIT_BRANCH}${RESET}\n[${TIMESTAMP}] ❯❯❯ "
