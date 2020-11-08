@@ -18,6 +18,7 @@
     undo = reset --soft head^
     puhs = push
     fire = !git add . && git commit -m "FIRE" && git push -f
+    inspect = !~/scripts/git-inspect-current-branch.sh
 [core]
     excludesfile = ~/.gitignore_global
     pager = less -r
