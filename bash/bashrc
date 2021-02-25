@@ -60,9 +60,8 @@ alias fucking=sudo
 alias stack=docker-compose
 
 # Editor settings
-alias edit="emacsclient -t --alternate-editor=''"
-export EDITOR="emacsclient -t"
-export VISUAL="emacsclient -t"
+export EDITOR="emacs"
+export VISUAL="emacs"
 
 # Better tab completion. Not sure what bash version is needed for this.
 bind 'set completion-ignore-case on'
