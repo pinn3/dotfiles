@@ -70,5 +70,12 @@
 (add-hook 'after-save-hook 'run-python-formatter)
 
 
+;; Set jinja2 as web-mode engine when working on html in flask-app
+(defun set-jinja2-web-mode-engine ()
+  (when (file-in-directory-p buffer-file-name "/home/pinn3/git/flowbox")
+    (when (string= (file-name-extension buffer-file-name) "html")
+      (web-mode-set-engine "jinja2"))))
+(add-hook 'web-mode-hook 'set-jinja2-web-mode-engine)
+
 (provide 'flowbox)
 ;;; flowbox.el ends here
