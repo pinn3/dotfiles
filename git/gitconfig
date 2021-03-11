@@ -6,7 +6,7 @@
     st = status
     ci = commit
     br = branch
-    co = checkout
+    co = !~/scripts/git-smart-checkout.sh
     df = diff
     lg = log -p
     l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
