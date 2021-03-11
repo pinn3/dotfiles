@@ -1,6 +1,8 @@
 ;;; modes.el --- Emacs custom modes config
 ;;; Commentary:
 
+(set-language-environment "UTF-8")
+
 
 ;; Whitespace
 ;;; code:
