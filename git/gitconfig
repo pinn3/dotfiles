@@ -6,17 +6,10 @@
     st = status
     ci = commit
     br = branch
-    co = !~/scripts/git-smart-checkout.sh
+    co = checkout
     df = diff
-    lg = log -p
-    l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-    ll = log --stat --abbrev-commit
-    last = log -1 HEAD
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    mine = log --author='\\(Jonathan Nguyen\\)\\|\\(pinn3\\)'
     undo = reset --soft HEAD^
     puhs = push
-    fire = !git add . && git commit -m "FIRE" && git push -f
     inspect = !~/scripts/git-inspect-current-branch.sh
 [core]
     excludesfile = ~/.gitignore_global
