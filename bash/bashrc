@@ -52,11 +52,6 @@ alias gi=git
 alias gitk=git
 alias gtik=git
 
-# Legacy grep alias with various flags. Use silver searcher (ag) instead.
-alias grope='grep --color=auto --exclude-dir={log,node_modules} --exclude={*.css,*.map} -rn'
-
-alias fucking=sudo
-
 alias stack=docker-compose
 
 # Editor settings
