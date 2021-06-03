@@ -25,8 +25,10 @@
 
 
 ;; Autocomplete
-(require 'auto-complete-config)
-(ac-config-default)
+(require 'company)
+(global-company-mode t)
+(define-key company-active-map (kbd "C-h") nil) ; disable pesky documentation window keybind
+(define-key company-active-map (kbd "TAB") 'company-complete-selection)
 
 ;; Autocorrect
 (setq default-abbrev-mode t)

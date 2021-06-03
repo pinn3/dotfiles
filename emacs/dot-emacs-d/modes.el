@@ -59,6 +59,14 @@
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
 
 
+;; lsp-mode
+;;; code:
+(require 'lsp-mode)
+(add-hook 'web-mode-hook #'lsp)
+(setq lsp-headerline-breadcrumb-enable nil)
+(define-key lsp-mode-map (kbd "C-x C-g") 'lsp-goto-implementation)
+
+
 ;; Coffee-mode
 ;;; code:
 (add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))

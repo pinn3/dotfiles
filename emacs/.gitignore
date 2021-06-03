@@ -5,3 +5,4 @@ dot-emacs-d/eshell/*
 !dot-emacs-d/eshell/alias
 dot-emacs-d/tramp
 dot-emacs-d/abbrev_defs
+dot-emacs-d/.lsp-session-*
