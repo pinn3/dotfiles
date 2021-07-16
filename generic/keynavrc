@@ -1,0 +1,20 @@
+clear
+ctrl+semicolon start
+Escape end
+h cut-left
+j cut-down
+k cut-up
+l cut-right
+shift+h move-left
+shift+j move-down
+shift+k move-up
+shift+l move-right
+space warp,click 1,end
+Return warp,click 1,end
+w warp
+c cursorzoom 200 200
+1 click 1
+2 click 2
+3 click 3
+4 click 4
+5 click 5
