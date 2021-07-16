@@ -16,6 +16,8 @@
     pager = less -r
 [push]
   	default = current
+[pull]
+	rebase = false
 
-[includeIf "gitdir:~/git/flowbox*/"]
+[includeIf "gitdir:~/git/demando*/"]
     path = ~/git/dotfiles/git/gitconfig_work
