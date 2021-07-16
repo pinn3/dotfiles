@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
