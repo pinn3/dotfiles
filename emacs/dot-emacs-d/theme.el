@@ -65,10 +65,6 @@ Has no effect if the character before point is not of the syntax class ')'."
 (setq helm-autoresize-min-height 11)
 (setq helm-display-header-line nil)
 (setq helm-split-window-in-side-p t)
-(advice-add 'helm-ff-filter-candidate-one-by-one
-            :around (lambda (fcn file)
-                      (unless (string-match "\\(?:/\\|\\`\\)\\.\\{1,2\\}\\'" file)
-                                            (funcall fcn file))))
 
 ;; Neotree
 (require 'neotree)
