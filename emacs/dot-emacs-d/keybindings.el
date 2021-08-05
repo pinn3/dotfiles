@@ -20,6 +20,7 @@
         (setq buffer (car list))))
     (message "Refreshed open files")))
 (global-set-key (kbd "M-R") 'revert-all-buffers)
+(global-set-key (kbd "C-x r") 'font-lock-fontify-buffer)
 (global-set-key (kbd "C-?") 'help-command)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
