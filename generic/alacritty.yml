@@ -2,9 +2,7 @@ env:
   WINIT_X11_SCALE_FACTOR: '1'
 
 font:
-  size: 9
-  offset:
-    y: 1
+  size: 8.5
 
 window:
   padding:
