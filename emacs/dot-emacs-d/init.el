@@ -26,9 +26,6 @@
 (load-file "~/.emacs.d/modes.el")
 
 
-(require 'expand-region)
-(global-set-key (kbd "M-SPC") 'er/expand-region)
-(global-set-key (kbd "M-DEL") 'er/contract-region)
 (pending-delete-mode t)
 
 

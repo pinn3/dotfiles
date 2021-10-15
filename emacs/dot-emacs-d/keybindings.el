@@ -60,5 +60,11 @@
 (setq helm-M-x-fuzzy-match t)
 
 
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "M-SPC") 'er/expand-region)
+(global-set-key (kbd "M-DEL") 'er/contract-region)
+
+
 (provide 'keybindings)
 ;;; keybindings.el ends here
