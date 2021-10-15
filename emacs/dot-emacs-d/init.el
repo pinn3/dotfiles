@@ -20,7 +20,6 @@
 
 
 (load-file "~/.emacs.d/theme.el")
-(load-file "~/.emacs.d/flowbox.el")
 ; Legacy stuff:
 (load-file "~/.emacs.d/keybindings.el")
 (load-file "~/.emacs.d/behaviour.el")

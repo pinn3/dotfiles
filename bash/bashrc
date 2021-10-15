@@ -68,9 +68,6 @@ bind 'TAB:menu-complete'
 # Ugh why. Not sure if I need this
 export TERM="xterm-256color" 
 
-# Add flowbox specific configuration
-. ${HOME}/.bash_modules/flowbox.sh
-
 # the following should be in system-specific.sh or something
 cat /etc/motd
 
