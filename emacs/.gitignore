@@ -6,3 +6,4 @@ dot-emacs-d/eshell/*
 dot-emacs-d/tramp
 dot-emacs-d/abbrev_defs
 dot-emacs-d/.lsp-session-*
+dot-emacs-d/.cache/lsp/
