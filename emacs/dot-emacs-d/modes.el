@@ -147,5 +147,12 @@
       erc-log-write-after-insert t)
 
 
+;; Pending delete
+;; This is disabled by default, enabling it makes for a behaviour where one can
+;; type to replace the contents of a selection. Without it enabled, text would
+;; just be added after the cursor. This pairs well with expand-region.
+(pending-delete-mode t)
+
+
 (provide 'modes)
 ;;; modes.el ends here

@@ -26,8 +26,5 @@
 (load-file "~/.emacs.d/modes.el")
 
 
-(pending-delete-mode t)
-
-
 (provide 'init)
 ;;; init.el ends here
