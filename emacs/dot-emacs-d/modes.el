@@ -98,11 +98,6 @@
 (setq web-mode-attr-indent-offset 2)
 
 
-;; julia-mode
-;;; code:
-(add-to-list 'auto-mode-alist '("\\.jl\\'" . julia-mode))
-
-
 ;; Flycheck
 ;;; code:
 (require 'flycheck)
