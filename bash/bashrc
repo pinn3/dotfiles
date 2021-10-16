@@ -13,17 +13,17 @@ export HISTSIZE="INFINITE"
 shopt -s globstar
 
 # Add PS1 customization
-. ${HOME}/.bash_modules/ps1.sh
+. $(dirname $(readlink $HOME/.bashrc))/modules/ps1.sh
 
 # Add Z for jumping directories
 export _Z_CMD="j"
-. ${HOME}/.bash_modules/z.sh
+. $(dirname $(readlink $HOME/.bashrc))/modules/z.sh
 
 # Add trash configuration
-. ${HOME}/.bash_modules/trash.sh
+. $(dirname $(readlink $HOME/.bashrc))/modules/trash.sh
 
 # Add base16 colors
-. ${HOME}/.bash_modules/base16-tomorrow-night.sh
+. $(dirname $(readlink $HOME/.bashrc))/modules/base16-tomorrow-night.sh
 
 # Prompt for removal confirmation
 alias rm='rm -i'
@@ -59,4 +59,4 @@ bind 'TAB:menu-complete'
 export TERM="xterm-256color"
 
 # Add some host specific configuration
-. ${HOME}/.bash_modules/${HOSTNAME}-specific.sh
+. $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh
