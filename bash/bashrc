@@ -9,9 +9,6 @@ export LANG="en_US.UTF-8"
 # Set history size to infinite
 export HISTSIZE="INFINITE"
 
-# Add custom binaries to path
-export PATH=$PATH:${HOME}/.bash_binaries
-
 # Enable ** (globstar) path matching
 shopt -s globstar
 
