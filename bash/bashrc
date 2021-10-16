@@ -19,14 +19,8 @@ shopt -s globstar
 export _Z_CMD="j"
 . ${HOME}/.bash_modules/z.sh
 
-# Add git completion
-. ${HOME}/.bash_modules/git-completion.sh
-
 # Add trash configuration
 . ${HOME}/.bash_modules/trash.sh
-
-# Add pass completion
-. ${HOME}/.bash_modules/pass-completion.sh
 
 # Add base16 colors
 . ${HOME}/.bash_modules/base16-tomorrow-night.sh
