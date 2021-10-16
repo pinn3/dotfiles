@@ -1,0 +1,37 @@
+{
+    "editor.cursorStyle": "block",
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.enablePreview": false,
+    "editor.lineNumbers": "off",
+    "editor.fontSize": 12,
+    "workbench.colorTheme": "Base16 Tomorrow Night",
+    "workbench.editor.splitSizing": "split",
+    "workbench.editor.showIcons": false,
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "terminal.integrated.fontSize": 12,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.showTabs": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false
+}
