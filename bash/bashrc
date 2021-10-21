@@ -19,9 +19,6 @@ shopt -s globstar
 export _Z_CMD="j"
 . $(dirname $(readlink $HOME/.bashrc))/modules/z.sh
 
-# Add trash configuration
-. $(dirname $(readlink $HOME/.bashrc))/modules/trash.sh
-
 # Add base16 colors
 . $(dirname $(readlink $HOME/.bashrc))/modules/base16-tomorrow-night.sh
 
