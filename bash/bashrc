@@ -49,6 +49,9 @@ bind 'set colored-stats on'
 bind 'set visible-stats on'
 bind 'TAB:menu-complete'
 
+# Ugh why. Not sure if I need this
+export TERM="xterm-256color"
+
 # Add some host specific configuration, if available
 if [ -f $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh ]; then
    . $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh
