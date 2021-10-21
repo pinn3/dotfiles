@@ -1,3 +1,0 @@
-hardstatus alwayslastline "%{b w}%H %{r}%1` %{w}| %{-b w}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
-term "screen-256color"
-escape ^Qq
