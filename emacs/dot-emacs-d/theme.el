@@ -16,10 +16,8 @@
   :background (face-attribute 'default :background))
 
 
-;; Disable Menu Bar, Scroll Bar, tool bar
+;; Disable Menu Bar
 (menu-bar-mode -1)
-;(scroll-bar-mode -1)
-;(tool-bar-mode -1)
 
 
 ;; Mode-line customization
