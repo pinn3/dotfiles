@@ -1,9 +1,0 @@
-{
-    "~d" = "deleteWordForward:";
-    "~h" = "deleteWordBackward:";
-    "~f" = "moveWordForward:";
-    "~b" = "moveWordBackward:";
-    "^ " = "setMark:";
-    "^w" = "deleteToMark:";
-    "^j" = "insertLineBreak:";
-}
