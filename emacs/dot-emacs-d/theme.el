@@ -10,8 +10,6 @@
     (load-theme 'base16-tomorrow-night))))
 
 ;; Hide buffer separator
-;(set-display-table-slot standard-display-table
-;  'vertical-border (make-glyph-code 8203))
 (set-face-attribute 'vertical-border
   nil
   :foreground (face-attribute 'default :background)
