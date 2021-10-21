@@ -49,5 +49,7 @@ bind 'set colored-stats on'
 bind 'set visible-stats on'
 bind 'TAB:menu-complete'
 
-# Add some host specific configuration
-. $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh
+# Add some host specific configuration, if available
+if [ -f $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh ]; then
+   . $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh
+fi
