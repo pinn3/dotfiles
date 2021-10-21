@@ -49,7 +49,9 @@ bind 'set colored-stats on'
 bind 'set visible-stats on'
 bind 'TAB:menu-complete'
 
-# Ugh why. Not sure if I need this
+# Hack necessary for the base16 color theme to work
+# Preferably it would be set to the actual terminal emulator used (Alacritty),
+# but there doesn't seem to be a valid 256 color theme for it
 export TERM="xterm-256color"
 
 # Add some host specific configuration, if available
