@@ -19,8 +19,15 @@ shopt -s globstar
 export _Z_CMD="j"
 . $(dirname $(readlink $HOME/.bashrc))/modules/z.sh
 
-# Add base16 colors
-. $(dirname $(readlink $HOME/.bashrc))/modules/base16-tomorrow-night.sh
+# Add base16 colors, if possible
+if [ "$TERM" != "linux" ]; then
+   . $(dirname $(readlink $HOME/.bashrc))/modules/base16-tomorrow-night.sh
+
+   # Hack necessary for the base16 color theme to work
+   # Preferably it would be set to the actual terminal emulator used (Alacritty),
+   # but there doesn't seem to be a valid 256 color theme for it
+   export TERM="xterm-256color"
+fi
 
 # Prompt for removal confirmation
 alias rm='rm -i'
@@ -48,11 +55,6 @@ bind 'set show-all-if-ambiguous on'
 bind 'set colored-stats on'
 bind 'set visible-stats on'
 bind 'TAB:menu-complete'
-
-# Hack necessary for the base16 color theme to work
-# Preferably it would be set to the actual terminal emulator used (Alacritty),
-# but there doesn't seem to be a valid 256 color theme for it
-export TERM="xterm-256color"
 
 # Add some host specific configuration, if available
 if [ -f $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh ]; then

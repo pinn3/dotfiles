@@ -3,10 +3,11 @@
 
 
 ;;; Code:
-(require 'base16-theme)
-(setq base16-theme-256-color-source "base16-shell")
-(load-theme 'base16-tomorrow-night)
-
+(if (equal (getenv "TERM") "xterm-256color")
+  ((lambda ()
+    (require 'base16-theme)
+    (setq base16-theme-256-color-source "base16-shell")
+    (load-theme 'base16-tomorrow-night))))
 
 ;; Hide buffer separator
 ;(set-display-table-slot standard-display-table
