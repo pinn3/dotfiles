@@ -19,6 +19,3 @@
   	default = current
 [pull]
 	rebase = false
-
-[includeIf "gitdir:~/git/demando*/"]
-    path = ~/git/dotfiles/git/gitconfig_work
