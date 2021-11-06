@@ -16,6 +16,6 @@
     excludesfile = ~/.gitignore_global
     pager = less -r
 [push]
-  	default = current
+    default = current
 [pull]
-	rebase = false
+    rebase = false
