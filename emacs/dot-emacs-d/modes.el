@@ -54,7 +54,9 @@
 (require 'lsp-mode)
 (add-hook 'web-mode-hook #'lsp)
 (setq lsp-headerline-breadcrumb-enable nil)
-(define-key lsp-mode-map (kbd "C-x C-g") 'lsp-goto-implementation)
+(define-key lsp-mode-map (kbd "M-G") 'lsp-goto-implementation)
+(define-key lsp-mode-map (kbd "M-N") 'flycheck-next-error)
+(define-key lsp-mode-map (kbd "M-P") 'flycheck-previous-error)
 
 
 ;; lua-mode
