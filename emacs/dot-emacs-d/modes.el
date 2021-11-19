@@ -17,23 +17,13 @@
 (editorconfig-mode 1)
 
 
-;; Shiba markdown
-;;; code:
-(require 'markdown-mode)
-(defun open-with-shiba ()
-  "open a current markdown file with shiba"
-  (interactive)
-  (start-process "shiba" "*shiba*" "shiba" "--detach" buffer-file-name))
-(define-key markdown-mode-map (kbd "C-c C-c") 'open-with-shiba)
-
-
 ;; Emmet
 ;;; code:
 (require 'emmet-mode)
 (define-key emmet-mode-keymap (kbd "C-o") 'emmet-expand-line)
 (define-key emmet-mode-keymap (kbd "C-j") 'newline)
 (add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
-(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'css-mode-hook 'emmet-mode) ;; enable Emmet's css abbreviation.
 
 
 ;; Web-mode
@@ -65,11 +55,6 @@
 (add-hook 'web-mode-hook #'lsp)
 (setq lsp-headerline-breadcrumb-enable nil)
 (define-key lsp-mode-map (kbd "C-x C-g") 'lsp-goto-implementation)
-
-
-;; Coffee-mode
-;;; code:
-(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
 
 
 ;; lua-mode
@@ -113,15 +98,6 @@
     '(json-jsonlist)))
 
 
-
-
-;(if (eq system-type 'darwin)
-;    (exec-path-from-shell-initialize)
-;    (setq shell-command-switch "-ic"))
-
-;; Add standard js linting
-;(flycheck-add-mode 'javascript-standard 'web-mode)
-
 ;; Eslint
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
@@ -129,22 +105,6 @@
 ;; Org-mode
 ;;; code:
 (add-hook 'org-mode-hook (lambda () (org-indent-mode t)) t) ;; hides leading stars
-
-
-;; Erc
-;;; code:
-(add-hook 'erc-mode-hook (lambda () (set (make-local-variable 'scroll-conservatively) 100)))
-(setq erc-nick "pinn3")
-(setq erc-user-full-name "pinn3"
-      erc-part-reason-various-alist '(("^$" "Leaving"))
-      erc-quit-reason-various-alist '(("^$" "Leaving"))
-      erc-quit-reason 'erc-part-reason-various
-      erc-part-reason 'erc-quit-reason-various)
-(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
-(setq erc-save-buffer-on-part nil
-      erc-save-queries-on-quit nil
-      erc-log-write-after-send t
-      erc-log-write-after-insert t)
 
 
 ;; Pending delete
