@@ -110,6 +110,12 @@
 (add-hook 'org-mode-hook (lambda () (org-indent-mode t)) t) ;; hides leading stars
 
 
+;; lua-mode
+;;; code:
+(require 'ledger-mode)
+(add-to-list 'auto-mode-alist '("\\.dat\\'" . ledger-mode))
+
+
 ;; Pending delete
 ;; This is disabled by default, enabling it makes for a behaviour where one can
 ;; type to replace the contents of a selection. Without it enabled, text would
