@@ -3,7 +3,7 @@ eval "$(direnv hook bash)"
 
 cat /etc/motd
 
-export PATH=$PATH:${HOME}/scripts
+export PATH=${HOME}/scripts:$PATH
 export BROWSER="docker exec firefox startfirefox"
 
 [[ -z $DISPLAY && XDG_VTNR -eq 1 ]] && exec startx

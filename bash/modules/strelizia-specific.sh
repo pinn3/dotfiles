@@ -2,7 +2,7 @@ alias cat="bat --plain --paging=never --theme base16"
 alias less="bat --plain --paging=always --theme base16"
 alias diff="diff --color=always"
 
-export PATH=$PATH:${HOME}/scripts
+export PATH=${HOME}/scripts:$PATH
 export BROWSER=$(which firefox)
 
 eval "$(direnv hook bash)"
