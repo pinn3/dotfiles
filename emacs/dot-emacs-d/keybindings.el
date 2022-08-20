@@ -11,8 +11,6 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
-(when (fboundp 'windmove-default-keybindings)
-    (windmove-default-keybindings))
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "C-x p") 'ace-window)
