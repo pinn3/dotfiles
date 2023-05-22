@@ -57,7 +57,7 @@ bind 'set visible-stats on'
 bind 'TAB:menu-complete'
 
 # Customize fzf
-export FZF_DEFAULT_OPTS="--color=16 --info=hidden --no-bold --reverse"
+export FZF_DEFAULT_OPTS="--color=16 --info=hidden --no-bold --reverse --bind=ctrl-k:kill-line"
 
 # Add some host specific configuration, if available
 if [ -f $(dirname $(readlink $HOME/.bashrc))/modules/${HOSTNAME}-specific.sh ]; then
