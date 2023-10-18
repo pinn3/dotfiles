@@ -123,5 +123,13 @@
 (pending-delete-mode t)
 
 
+;; Git commit formatting
+(require 'git-commit)
+(add-hook 'git-commit-mode-hook
+          (lambda ()
+            (set-fill-column 72)
+            (setq git-commit-summary-max-length 50)))
+
+
 (provide 'modes)
 ;;; modes.el ends here
