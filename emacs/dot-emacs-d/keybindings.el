@@ -26,21 +26,9 @@
 (global-set-key [f4] 'kmacro-end-or-call-macro)
 
 
-;; Helm
-(require 'helm)
-(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-z") 'helm-select-action)
-(define-key helm-map (kbd "C-h") nil)
-(global-set-key (kbd "M-x") 'undefined)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(setq helm-ff-skip-boring-files t)
-(setq helm-ff-skip-boring-files nil)
-(setq helm-M-x-fuzzy-match t)
+;; fido-mode
+(fido-mode t)
+(fido-vertical-mode t)
 
 
 ;; expand-region

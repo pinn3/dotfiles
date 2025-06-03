@@ -55,14 +55,6 @@ Has no effect if the character before point is not of the syntax class ')'."
 (setq indent-guide-delay 0.2)
 
 
-;; Helm
-(require 'helm)
-(helm-autoresize-mode 1)
-(setq helm-autoresize-max-height 11)
-(setq helm-autoresize-min-height 11)
-(setq helm-display-header-line nil)
-(setq helm-split-window-in-side-p t)
-
 ;; Neotree
 (require 'neotree)
 (setq neo-window-width 50)
