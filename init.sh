@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+set -e
 
-./bash/setup.sh
-./misc/setup.sh
-./git/setup.sh
-./emacs/setup.sh
+here=$(realpath $(dirname "$0"))
+
+$here/bash/setup.sh
+$here/misc/setup.sh
+$here/git/setup.sh
+$here/emacs/setup.sh

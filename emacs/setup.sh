@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ln -s $DIR/dot-emacs-d ~/.emacs.d &&
-echo "Symlinked emacs dotfiles."
+here=$(realpath $(dirname "$0"))
 
+ln -sfn $here/dot-emacs-d ~/.emacs.d
+echo "Symlinked emacs configuration"

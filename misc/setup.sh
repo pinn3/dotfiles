@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
+set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+here=$(realpath $(dirname "$0"))
 
-(mkdir -p ~/.config/alacritty/ && ln -s $DIR/alacritty.yml ~/.config/alacritty/alacritty.yml && echo "Symlinked Alacritty configuration")
-(mkdir -p ~/.config/keynav/ && ln -s $DIR/keynavrc ~/.config/keynav/keynavrc && echo "Symlinked keynav configuration")
+mkdir -p ~/.config/alacritty/
+ln -sfn $here/alacritty.yml ~/.config/alacritty/alacritty.yml
+echo "Symlinked Alacritty configuration"
+
+mkdir -p ~/.config/keynav/
+ln -sfn $here/keynavrc ~/.config/keynav/keynavrc
+echo "Symlinked keynav configuration"

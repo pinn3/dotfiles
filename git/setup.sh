@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ln -s $DIR/gitignore_global ~/.gitignore_global &&
-ln -s $DIR/gitconfig ~/.gitconfig &&
-echo "Symlinked git dotfiles."
+here=$(realpath $(dirname "$0"))
+
+ln -s $here/gitignore_global ~/.gitignore_global
+ln -s $here/gitconfig ~/.gitconfig
+echo "Symlinked git configuration"
 
