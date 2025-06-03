@@ -3,7 +3,8 @@
 
 
 ;;; Code:
-(if (equal (getenv "TERM") "xterm-256color")
+(if (or (equal (getenv "TERM") "xterm-256color")
+        (equal (getenv "TERM") "alacritty"))
   ((lambda ()
     (require 'base16-theme)
     (setq base16-theme-256-color-source "base16-shell")
