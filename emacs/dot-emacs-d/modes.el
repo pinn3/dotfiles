@@ -35,8 +35,6 @@
 (add-to-list 'auto-mode-alist '("\\.ejs?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.ts?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -49,15 +47,17 @@
 (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
 
 
-;; lsp-mode
+;; eglot
 ;;; code:
-(require 'lsp-mode)
-(add-hook 'web-mode-hook #'lsp)
-(setq lsp-headerline-breadcrumb-enable nil)
-(define-key lsp-mode-map (kbd "M-G") 'lsp-find-definition)
-(define-key lsp-mode-map (kbd "M-N") 'flycheck-next-error)
-(define-key lsp-mode-map (kbd "M-P") 'flycheck-previous-error)
-(define-key lsp-mode-map (kbd "M-R") 'lsp-find-references)
+(require 'eglot)
+(define-key eglot-mode-map (kbd "M-G") 'xref-find-definitions)
+(define-key eglot-mode-map (kbd "M-N") 'flymake-goto-next-error)
+(define-key eglot-mode-map (kbd "M-P") 'flymake-goto-prev-error)
+(define-key eglot-mode-map (kbd "M-R") 'xref-find-references)
+(add-hook 'typescript-ts-mode-hook 'eglot-ensure)
+(add-hook 'tsx-ts-mode-hook 'eglot-ensure)
+(add-to-list 'auto-mode-alist '("\\\.ts?\\\'" . typescript-ts-mode))
+(add-to-list 'auto-mode-alist '("\\\.tsx?\\\'" . tsx-ts-mode))
 
 
 ;; lua-mode
