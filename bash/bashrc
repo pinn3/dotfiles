@@ -19,7 +19,7 @@ shopt -s globstar
 export _Z_CMD="j"
 . $(dirname $(readlink $HOME/.bashrc))/modules/z.sh
 
-# Add base16 colors, if possible
+# Use base16 colors, if possible
 if [ "$TERM" != "linux" ]; then
    . $(dirname $(readlink $HOME/.bashrc))/modules/base16-tomorrow-night.sh
 
@@ -29,8 +29,8 @@ if [ "$TERM" != "linux" ]; then
    export TERM="xterm-256color"
 fi
 
-# Prompt for removal confirmation
-alias rm='rm -i'
+# Prompt before removal and explain what is being done
+alias rm='rm -i -v'
 
 # Shorthand aliases for ls with flags
 ls --color=auto &> /dev/null &&
@@ -39,7 +39,7 @@ alias ls="ls -G"
 alias ll='ls -l'
 alias la='ll -A'
 
-# Don't get interupted by git misspelling!
+# I misspell git a lot
 alias gti=git
 alias gi=git
 alias gitk=git
@@ -49,7 +49,7 @@ alias gtik=git
 export EDITOR="emacs"
 export VISUAL="emacs"
 
-# Better tab completion. Not sure what bash version is needed for this.
+# Better tab completion. Not sure which bash version is needed for this.
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 bind 'set colored-stats on'
